@@ -1,4 +1,7 @@
 
+using Bloggy.Server.DB;
+using Microsoft.EntityFrameworkCore;
+
 namespace Bloggy.Server
 {
     public class Program
@@ -10,6 +13,8 @@ namespace Bloggy.Server
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddNpgsql<DatabaseContext>(builder.Configuration.GetConnectionString("PostgreSQLConnection"));
+            builder.Services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQLConnection")));
 
             var app = builder.Build();
 
