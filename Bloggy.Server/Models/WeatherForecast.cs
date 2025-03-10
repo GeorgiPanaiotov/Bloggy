@@ -1,4 +1,4 @@
-namespace Bloggy.Server
+namespace Bloggy.Server.Models
 {
     public class WeatherForecast
     {

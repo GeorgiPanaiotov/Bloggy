@@ -1,3 +1,4 @@
+using Bloggy.Server.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Bloggy.Server.Controllers;
