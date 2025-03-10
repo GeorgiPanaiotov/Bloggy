@@ -1,0 +1,6 @@
+@Bloggy.Server_HostAddress = http://localhost:5091
+
+GET {{Bloggy.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
